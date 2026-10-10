@@ -5,22 +5,22 @@ Acme Store is the controlled demo website designed for the **Patchwork** visual 
 ## Project Structure
 
 ```text
-Ecommerce/
+.
 ├── index.html          # Storefront with hero, categories, products, and cart
 ├── checkout.html       # Static order confirmation page
 ├── styles.css          # Site stylesheet with scoped component classes
 ├── app.js              # Client-side demo cart and navigation logic
 ├── patchwork.map.json  # Component mapping schema for Patchwork Visual Editor
-└── check-map.mjs       # Validation script for IDs, selectors, and mapping
+├── check-map.mjs       # Validation script for IDs, selectors, and mapping
+└── README.md
 ```
 
 ## Run Locally
 
-From the repository root, navigate into `Ecommerce` and start a local HTTP server:
+From the repository root, start a local HTTP server:
 
 ### Option 1: Python (Port 3000 - matches Patchwork Visual Editor)
 ```powershell
-cd Ecommerce
 python -m http.server 3000
 ```
 
@@ -31,7 +31,6 @@ python -m http.server 3000
 
 ### Option 2: Node.js
 ```powershell
-cd Ecommerce
 npx serve -l 3000 .
 ```
 
@@ -42,6 +41,5 @@ Then visit <http://localhost:3000> (or <http://localhost:4000>) in your browser 
 To verify that all `data-patchwork-id` attributes, CSS selectors, and mappings in `patchwork.map.json` are consistent:
 
 ```powershell
-cd Ecommerce
 node check-map.mjs
 ```
